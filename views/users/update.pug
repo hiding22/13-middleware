@@ -1,0 +1,6 @@
+extends ../layouts/common
+block head
+	h3 Users
+	form(action="/users/update/"+id, method="POST")
+		label New name 
+		input(type="text", name="name")
