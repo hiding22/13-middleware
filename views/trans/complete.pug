@@ -1,0 +1,25 @@
+extends ../layouts/common
+block head
+	h3 Transactions
+	
+	if errors
+		each error in errors
+			.alert.alert-danger= error
+	else
+		span Id:
+		span &nbsp;
+		span= trans.id
+		br
+
+		span userId:
+		span &nbsp;
+		span= trans.userId
+		br
+
+		span bookId:
+		span &nbsp;
+		span= trans.bookId
+		span &nbsp;
+
+		form(action="/transactions/"+trans.id+"/complete", method="POST")
+			button Hoàn thành

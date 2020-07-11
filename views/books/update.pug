@@ -1,0 +1,6 @@
+extends ../layouts/common
+block head
+	h3 Books
+	form(action="/books/update/"+id, method="POST")
+		label New title 
+		input(type="text", name="title")
